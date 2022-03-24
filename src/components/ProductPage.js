@@ -1,8 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import MovieCard from "./MovieCard";
 
 function ProductPage(props){
 
     const api_key = process.env.REACT_APP_API_KEY;
+
+    const [movieCards, setMovieCards] = useState([])
 
     async function getConfig(){
       try{
@@ -26,24 +29,33 @@ function ProductPage(props){
       }
     }
   
-    function searchMovie(searchTerm){
-      getConfig().then((data)=>{
-        const baseUrl = data["images"]["base_url"];
-        const posterSize = data["images"]["poster_sizes"][2];
-        queryAPI(searchTerm).then((movies)=>{
-          movies.results.forEach((movie)=>{
-            const imageUrl = baseUrl + posterSize + movie["poster_path"];
-          })
-        })
+    async function searchMovie(searchTerm){
+      const movieCardArr = []
+      const config = await getConfig();
+      const baseUrl = config["images"]["base_url"];
+      const posterSize = config["images"]["poster_sizes"][2];
+      const queryRespone = await queryAPI(searchTerm);
+      const movies = queryRespone["results"]
+      movies.forEach((movie)=>{
+          const image = baseUrl + posterSize + movie["poster_path"]
+          const releaseDate = movie["release_date"]
+          const rating = movie["vote_average"]
+          movieCardArr.push(<MovieCard key={movie.id} title={movie.title} 
+            image={image} releaseDate={releaseDate} rating={rating}/> )
       })
+      return movieCardArr;
     }
   
     useEffect(()=>{
-      searchMovie(props.searchTerm)
+      searchMovie(props.searchTerm).then((data)=>{
+          setMovieCards(data)
+      })
     }, [])
 
     return(
-        <div></div>
+        <div>
+            {movieCards.map(movie => movie)}
+        </div>
     )
 }
 
