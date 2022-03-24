@@ -1,5 +1,5 @@
-import MovieGrid from "./MovieGrid"
-import Searchbar from "./Searchbar"
+import MovieGrid from "../components/MovieGrid"
+import Searchbar from "../components/Searchbar"
 import { useEffect, useState } from "react"
 function MoviesPage(){
     
