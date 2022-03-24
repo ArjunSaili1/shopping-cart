@@ -1,16 +1,23 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Homepage from "./components/Homepage";
-import MoviesPage from "./components/MoviesPage";
+import Homepage from "./pages/Homepage";
+import MoviesPage from "./pages/MoviesPage";
+import Header from "./components/Header";
 import "./App.css"
+import { useState } from "react";
 
 function App() {
+  const [cart, setCart] = useState([]);
+
+  function addItemToCart(item){
+    setCart(prevCart => [...prevCart, item]);
+  }
 
   return (
     <Router>
       <div className="App">
         <Routes>
           <Route path="/" element={<Homepage/>}/>
-          <Route path="/shop" element={<MoviesPage/>}/>
+          <Route path="/shop" element={<MoviesPage addItem={addItemToCart}/>}/>
         </Routes>
       </div>
     </Router>

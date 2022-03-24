@@ -45,7 +45,7 @@ function MovieGrid(props){
           }
           const releaseDate = movie["release_date"]
           const rating = movie["vote_average"]
-          movieCardArr.push(<MovieCard key={movie.id} title={movie.title} 
+          movieCardArr.push(<MovieCard addItem={props.addItem} key={movie.id} title={movie.title} 
             image={image} releaseDate={releaseDate} rating={rating}/> )
         })
       }
