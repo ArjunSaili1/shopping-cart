@@ -4,12 +4,17 @@ function MovieCard(props){
 
     const [price, setPrice] = useState(0);
 
-    const generateRandomPrice = () =>{
-        setPrice(Math.floor(Math.random() * (11) + 9) + 0.99)
+    const giveCartMovieDetails = () =>{
+        const movieDetails = {
+            title: props.title,
+            image: props.image,
+            price: price
+        }
+        props.addItem(movieDetails)
     }
 
     useEffect(()=>{
-        generateRandomPrice();
+        setPrice(Math.floor(Math.random() * (11) + 9) + 0.99)
     }, [])
 
     return(
@@ -22,7 +27,7 @@ function MovieCard(props){
                 <h5>{props.rating}/10</h5>
             </div>
             <div className="add-btn-container">
-                <button className="add-btn">Add to Cart</button>
+                <button className="add-btn" onClick={giveCartMovieDetails}>Add to Cart</button>
             </div>
         </div>
     )
