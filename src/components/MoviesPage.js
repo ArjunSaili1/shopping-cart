@@ -5,6 +5,11 @@ function MoviesPage(){
     
     const [movieGridComp, setMovieGridComp] = useState([])
 
+    function search(e){
+        e.preventDefault()
+        setMovieGridComp(<MovieGrid searchTerm={e.target.children[0].value}/>)
+    }
+
     useEffect(()=>{
         setMovieGridComp(<MovieGrid searchTerm="Batman"/>)
     }, [])
@@ -12,7 +17,7 @@ function MoviesPage(){
     return(
         <div className="movies-page">
             <div className="search-container">
-                <Searchbar/>    
+                <Searchbar search={search}/>    
             </div>
             {movieGridComp}
         </div>

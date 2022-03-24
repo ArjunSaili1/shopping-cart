@@ -1,6 +1,9 @@
 function Searchbar(props){
     return(
-        <input className="search-bar" type="text"></input>
+        <form onSubmit={props.search}>
+            <input className="search-bar" type="text"></input>
+            <button className='search-submit' type="submit">Search</button>
+        </form>
     )
 }
 
