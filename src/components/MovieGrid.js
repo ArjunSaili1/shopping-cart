@@ -53,7 +53,7 @@ function MovieGrid(props){
     }, [])
 
     return(
-        <div>
+        <div className="movie-grid">
             {movieCards.map(movie => movie)}
         </div>
     )

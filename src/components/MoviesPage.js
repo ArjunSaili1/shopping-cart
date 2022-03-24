@@ -9,7 +9,7 @@ function MoviesPage(){
     }, [])
 
     return(
-        <div>
+        <div className="movies-page">
             {movieGridComp}
         </div>
     )
