@@ -4,7 +4,8 @@ function MovieCard(props){
 
     const [price, setPrice] = useState(0);
 
-    const giveCartMovieDetails = () =>{
+    const giveCartMovieDetails = (e) =>{
+        e.target.remove();
         const movieDetails = {
             title: props.title,
             image: props.image,
