@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import MovieCard from "./MovieCard";
+import notFound from "./assets";
 
 function MovieGrid(props){
 
@@ -38,7 +39,10 @@ function MovieGrid(props){
       const movies = queryResponse["results"]
       if(movies.length !== 0){
         movies.forEach((movie)=>{
-          const image = baseUrl + posterSize + movie["poster_path"]
+          let image = baseUrl + posterSize + movie["poster_path"]
+          if(!movie["poster_path"]){
+            image = notFound;
+          }
           const releaseDate = movie["release_date"]
           const rating = movie["vote_average"]
           movieCardArr.push(<MovieCard key={movie.id} title={movie.title} 
