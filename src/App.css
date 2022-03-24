@@ -21,7 +21,6 @@ body{
   flex-direction: column;
   align-items: center;
   text-align: center;
-
 }
 
 .search-container{
@@ -34,4 +33,12 @@ body{
   font-size: 30px;
   font-family: 'Roboto Condensed', sans-serif;
   padding: 5px;
+}
+
+.add-btn-container{
+  margin-top:auto
+}
+
+.movie-img{
+  height: 231px;
 }
