@@ -55,7 +55,7 @@ function MovieGrid(props){
       searchMovie(props.searchTerm).then((data)=>{
           setMovieCards(data)
       })
-    }, [])
+    })
 
     return(
         <div className="movie-grid">
