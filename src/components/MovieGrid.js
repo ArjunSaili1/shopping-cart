@@ -14,8 +14,8 @@ function MovieGrid(props){
         const configResponseJson = configResponse.json();
         return configResponseJson;
       }
-      catch{
-        console.log("error") 
+      catch(e){
+        console.error(e) 
       }
     }
   
@@ -25,8 +25,8 @@ function MovieGrid(props){
         const responseJson = response.json();
         return responseJson
       }
-      catch{
-        console.log("uh oh")
+      catch(e){
+        console.error(e)
       }
     }
   
