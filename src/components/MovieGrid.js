@@ -34,15 +34,20 @@ function MovieGrid(props){
       const config = await getConfig();
       const baseUrl = config["images"]["base_url"];
       const posterSize = config["images"]["poster_sizes"][1];
-      const queryRespone = await queryAPI(searchTerm);
-      const movies = queryRespone["results"]
-      movies.forEach((movie)=>{
+      const queryResponse = await queryAPI(searchTerm);
+      const movies = queryResponse["results"]
+      if(movies.length !== 0){
+        movies.forEach((movie)=>{
           const image = baseUrl + posterSize + movie["poster_path"]
           const releaseDate = movie["release_date"]
           const rating = movie["vote_average"]
           movieCardArr.push(<MovieCard key={movie.id} title={movie.title} 
             image={image} releaseDate={releaseDate} rating={rating}/> )
-      })
+        })
+      }
+      else{
+        movieCardArr.push(<h2 key="not-found">Sorry this movie was not found</h2>)
+      }
       return movieCardArr;
     }
   
