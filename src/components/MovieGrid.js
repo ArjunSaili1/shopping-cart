@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import MovieCard from "./MovieCard";
 
-function ProductPage(props){
+function MovieGrid(props){
 
     const api_key = process.env.REACT_APP_API_KEY;
 
@@ -33,7 +33,7 @@ function ProductPage(props){
       const movieCardArr = []
       const config = await getConfig();
       const baseUrl = config["images"]["base_url"];
-      const posterSize = config["images"]["poster_sizes"][2];
+      const posterSize = config["images"]["poster_sizes"][1];
       const queryRespone = await queryAPI(searchTerm);
       const movies = queryRespone["results"]
       movies.forEach((movie)=>{
@@ -59,4 +59,4 @@ function ProductPage(props){
     )
 }
 
-export default ProductPage
+export default MovieGrid
