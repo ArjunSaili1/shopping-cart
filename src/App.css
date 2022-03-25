@@ -41,7 +41,7 @@ button{
 }
 
 .search-container{
-  margin: 2%;
+  padding: 2%;
   display: flex;
   justify-content: center;
 }
@@ -67,4 +67,28 @@ button{
 .movie-details > *{
   color:white;
   margin-bottom: 10px;
+}
+
+.logo{
+  height: 60px;
+  width: 60px;
+}
+
+.header{
+  background-color: #F6BE00;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.cart-icon{
+  transform: scale(2.5);
+}
+
+.cart-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 80px;
 }

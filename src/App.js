@@ -15,6 +15,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <Header cart={cart}/>
         <Routes>
           <Route path="/" element={<Homepage/>}/>
           <Route path="/shop" element={<MoviesPage addItem={addItemToCart}/>}/>
