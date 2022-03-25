@@ -75,6 +75,8 @@ button{
 }
 
 .header{
+  position: fixed;
+  width: 100%;
   background-color: #F6BE00;
   padding: 1vmax;
 }
@@ -128,4 +130,12 @@ button{
   border-radius: 50%;
   justify-content: center;
   align-items: center;
+}
+
+.shopping-cart-sidebar{
+  right: 0;
+  width: 40vw;
+  background-color: #171717;
+  height: 100vh;
+  position: fixed;
 }
