@@ -19,11 +19,18 @@ function App() {
     setCart(prevCart => [...prevCart, item]);
   }
 
+  function removeItemFromCart(item){
+    const cartCopy = cart.slice();
+    const index = cart.indexOf(item);
+    cartCopy.splice(index, 1)
+    setCart(cartCopy);
+  }
+
   return (
     <Router>
       <div className="App">
         <Header toggleShoppingCart={toggleShoppingCart} cart={cart}/>
-        {showCart ? <ShoppingCart toggleShoppingCart={toggleShoppingCart} cart={cart}/> : null}
+        {showCart ? <ShoppingCart removeItemFromCart={removeItemFromCart} toggleShoppingCart={toggleShoppingCart} cart={cart}/> : null}
         <Routes>
           <Route path="/" element={<Homepage/>}/>
           <Route path="/shop" element={<MoviesPage addItem={addItemToCart}/>}/>

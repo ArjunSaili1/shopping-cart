@@ -5,7 +5,7 @@ function ShoppingCart(props){
         <div className="screen-overlay" onClick={props.toggleShoppingCart}></div>
         <div className="shopping-cart-view">
             {props.cart.map(movie => {
-                return (<CartItem showAdd={movie["showAdd"]} key={movie["title"]} title={movie["title"]} image={movie["image"]} price={movie["price"]}/>)
+                return (<CartItem showAdd={movie["showAdd"]} removeItemFromCart={props.removeItemFromCart} key={movie["title"]} movie={movie}/>)
             })}
         </div>
     </div>)
