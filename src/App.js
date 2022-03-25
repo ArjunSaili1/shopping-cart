@@ -23,7 +23,7 @@ function App() {
     <Router>
       <div className="App">
         <Header toggleShoppingCart={toggleShoppingCart} cart={cart}/>
-        {showCart ? <ShoppingCart cart={cart}/> : null}
+        {showCart ? <ShoppingCart toggleShoppingCart={toggleShoppingCart} cart={cart}/> : null}
         <Routes>
           <Route path="/" element={<Homepage/>}/>
           <Route path="/shop" element={<MoviesPage addItem={addItemToCart}/>}/>
