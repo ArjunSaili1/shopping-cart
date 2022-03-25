@@ -50,7 +50,7 @@ function MovieGrid(props){
         })
       }
       else{
-        movieCardArr.push(<h2 key="not-found">Sorry this movie was not found</h2>)
+        movieCardArr.push(<h2 className="not-found" key="not-found">Sorry this movie was not found</h2>)
       }
       return movieCardArr;
     }

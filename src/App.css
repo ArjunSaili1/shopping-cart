@@ -10,10 +10,27 @@ body{
   font-family: 'Roboto Condensed', sans-serif;
 }
 
+button{
+  padding: 5px;
+  font-family: 'Roboto Condensed', sans-serif;
+  border-radius: 10px;
+}
+
 .movie-grid{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
+  column-gap: 8vmax;
+  row-gap: 6vmax;
+  padding: 50px 10%;
+}
+
+.movies-page{
+  background-color: #171717;
+}
+
+.not-found{
+  color: white;
+  height: 100%;
 }
 
 .movie-card{
@@ -24,9 +41,9 @@ body{
 }
 
 .search-container{
+  margin: 2%;
   display: flex;
   justify-content: center;
-  margin: 2%;
 }
 
 .search-bar{
@@ -36,9 +53,18 @@ body{
 }
 
 .add-btn-container{
-  margin-top:auto
+  margin-top:auto;
+}
+
+.add-btn-container > button{
+  font-size: 25px;
 }
 
 .movie-img{
   height: 231px;
+}
+
+.movie-details > *{
+  color:white;
+  margin-bottom: 10px;
 }
