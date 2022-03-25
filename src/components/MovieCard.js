@@ -1,8 +1,4 @@
-import { useEffect, useState } from "react";
-
 function MovieCard(props){
-
-    const [price, setPrice] = useState(0);
 
     const giveCartMovieDetails = (e) =>{
         e.target.remove();
@@ -14,16 +10,14 @@ function MovieCard(props){
         props.addItem(movieDetails)
     }
 
-    useEffect(()=>{
-        setPrice(Math.floor(Math.random() * (11) + 9) + 0.99)
-    }, [])
+    const price = props.releaseDate? "$".concat(props.releaseDate.substring(0,2)-0.01) : "Unavailable"
 
     return(
         <div className="movie-card">
             <div className="movie-details">
                 <img className="movie-img" alt={props.title} src={props.image}></img>
                 <h2>{props.title}</h2>  
-                <h3>${price}</h3>
+                <h3>{price}</h3>
                 <h4>{props.releaseDate}</h4>
                 <h5>{props.rating}/10</h5>
             </div>
