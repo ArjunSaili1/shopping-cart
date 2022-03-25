@@ -22,7 +22,7 @@ function MovieCard(props){
                 <h5>{props.rating}/10</h5>
             </div>
             <div className="add-btn-container">
-                <button className="add-btn" onClick={giveCartMovieDetails}>Add to Cart</button>
+                {props.releaseDate ? <button className="add-btn" onClick={giveCartMovieDetails}>Add to Cart</button>: null}
             </div>
         </div>
     )
