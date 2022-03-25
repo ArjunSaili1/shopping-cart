@@ -19,7 +19,7 @@ function MovieCard(props){
                 <h2>{props.title}</h2>  
                 <h3>{price}</h3>
                 <h4>{props.releaseDate}</h4>
-                <h5>{props.rating}/10</h5>
+                <h5>{props.releaseDate ? props.rating + "/10" : null}</h5>
             </div>
             <div className="add-btn-container">
                 {props.releaseDate ? <button className="add-btn" onClick={giveCartMovieDetails}>Add to Cart</button>: null}
