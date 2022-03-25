@@ -1,11 +1,16 @@
+import { useState } from "react";
+
 function MovieCard(props){
 
+    const[showAdd, setShowAdd] = useState(true);
+
     const giveCartMovieDetails = (e) =>{
-        e.target.remove();
+        setShowAdd(false)
         const movieDetails = {
             title: props.title,
             image: props.image,
-            price: price
+            price: price,
+            showAdd: ()=>{setShowAdd(true)},
         }
         props.addItem(movieDetails)
     }
@@ -22,7 +27,7 @@ function MovieCard(props){
                 <h5>{props.releaseDate ? props.rating + "/10" : null}</h5>
             </div>
             <div className="add-btn-container">
-                {props.releaseDate ? <button className="add-btn" onClick={giveCartMovieDetails}>Add to Cart</button>: null}
+                {props.releaseDate && showAdd ? <button className="add-btn" onClick={giveCartMovieDetails}>Add to Cart</button>: null}
             </div>
         </div>
     )
