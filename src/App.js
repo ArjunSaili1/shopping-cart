@@ -3,7 +3,7 @@ import Homepage from "./pages/Homepage";
 import MoviesPage from "./pages/MoviesPage";
 import Header from "./components/Header";
 import ShoppingCart from "./components/ShoppingCart";
-import "./App.css"
+import "./styles/App.css"
 import { useState } from "react";
 
 function App() {
