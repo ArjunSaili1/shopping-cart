@@ -8,7 +8,12 @@ import { useState } from "react";
 
 function App() {
   const [cart, setCart] = useState([]);
-  const [showCart, setShowCart] = useState(true);
+  const [showCart, setShowCart] = useState(false);
+
+  function toggleShoppingCart(e){
+    e.preventDefault()
+    setShowCart(!showCart);
+  }
 
   function addItemToCart(item){
     setCart(prevCart => [...prevCart, item]);
@@ -17,8 +22,8 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Header cart={cart}/>
-        {showCart ? <ShoppingCart/> : null}
+        <Header toggleShoppingCart={toggleShoppingCart} cart={cart}/>
+        {showCart ? <ShoppingCart cart={cart}/> : null}
         <Routes>
           <Route path="/" element={<Homepage/>}/>
           <Route path="/shop" element={<MoviesPage addItem={addItemToCart}/>}/>

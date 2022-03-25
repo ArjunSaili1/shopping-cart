@@ -12,7 +12,7 @@ function Header(props){
                 </span>
                 <a href="/"className="nav-links">Home</a>
                 <a href="/shop" className="nav-links">Shop</a>
-                <a href="/shop"className="cart-container">
+                <a href="/shop" onClick={props.toggleShoppingCart}className="cart-container">
                     <CartSVG className="cart-icon"/>
                     <span className="cart-count-container">
                         <span className="cart-count">{props.cart.length}</span>
