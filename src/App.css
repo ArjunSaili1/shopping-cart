@@ -70,15 +70,19 @@ button{
 }
 
 .logo{
-  height: 60px;
-  width: 60px;
+  height: 6.3rem;
+  width: 6.3rem;
 }
 
 .header{
   background-color: #F6BE00;
+  padding: 1vmax;
+}
+
+.header-nav{
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  padding: 5px;
 }
 
 .cart-icon{
@@ -91,4 +95,21 @@ button{
   align-items: center;
   height: 80px;
   width: 80px;
+}
+
+.logo-container{
+  display: flex;
+  gap: 6%;
+  align-items: center;
+}
+
+.nav-links{
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+}
+
+.title{
+  font-size: 3rem;
+  font-weight: bolder;
 }

@@ -5,11 +5,17 @@ function Header(props){
 
     return(
         <header className="header">
-            <LogoSVG className="logo"/>
-            <h1>Reel'd</h1>
-            <span className="cart-container">
-                <CartSVG className="cart-icon"/>
-            </span>
+            <nav className="header-nav">
+                <span className="logo-container">
+                    <LogoSVG className="logo"/>
+                    <a className="title">Reel'd</a>
+                </span>
+                <a href="/"className="nav-links">Home</a>
+                <a href="/shop" className="nav-links">Shop</a>
+                <span className="cart-container">
+                    <CartSVG className="cart-icon"/>
+                </span>
+            </nav>
         </header>
     )
 }
