@@ -148,8 +148,11 @@ button{
 }
 
 .shopping-cart-view{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: fixed;
-  gap: 100px;
+  gap: 20px;
   right: 0;
   width: 40vw;
   height: 90%;
@@ -159,13 +162,18 @@ button{
 }
 
 .cart-item{
-  margin-bottom: 20px;
   border-radius: 10px;
   background-color: #F6BE00;
   padding: 10px;
   justify-content: space-between;
   display: flex;
   align-items: center;
+}
+
+.product-view{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .cart-title{
@@ -185,4 +193,9 @@ button{
   justify-content: center;
   background-color: white;
   padding: 10px;
+}
+
+.shopping-cart-btn{
+  padding: 10px;
+  font-size: 20px;
 }
