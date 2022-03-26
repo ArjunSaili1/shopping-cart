@@ -6,9 +6,9 @@ function CartItem(props){
     }
 
     return(<div className="cart-item">
-        <h2>{props.movie["title"]}</h2>
+        <img className="cart-img" alt={props.movie["title"]}src={props.movie["image"]}></img>
+        <h2 className="cart-title">{props.movie["title"]}</h2>
         <h2>{props.movie["price"]}</h2>
-        <img alt={props.movie["title"]}src={props.movie["image"]}></img>
         <button onClick={removeFromCart}>Remove</button>
     </div>
     )
