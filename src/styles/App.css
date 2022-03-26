@@ -144,7 +144,7 @@ button{
 }
 
 .screen-overlay{
-  width: 60vw;
+  width: 60vmax;
 }
 
 .shopping-cart-view{
@@ -154,7 +154,7 @@ button{
   position: fixed;
   gap: 20px;
   right: 0;
-  width: 40vw;
+  width: 40vmax;
   height: 90%;
   padding: 5%;
   overflow-y:auto;
