@@ -150,7 +150,6 @@ button{
 .shopping-cart-view{
   display: flex;
   flex-direction: column;
-  justify-content: center;
   position: fixed;
   gap: 20px;
   right: 0;
