@@ -26,7 +26,7 @@ button{
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   column-gap: 8vmax;
   row-gap: 6vmax;
-  padding: 50px 10%;
+  padding: 20px 10%;
 }
 
 .movies-page{
@@ -56,22 +56,47 @@ button{
   justify-content: center;
   align-items: center;
 }
+
 .search-container > * > a{
   color: #F6BE00;
- }
+  text-decoration: underline;
+}
+
+.search-form{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-submit{
+  font-size: 22px;
+  padding: 2.5%;
+  background-color: #F6BE00;
+  font-weight: bold;
+  border: black;
+  cursor: pointer;
+}
 
 .search-bar{
   font-size: 30px;
   font-family: 'Roboto Condensed', sans-serif;
-  padding: 5px;
+  padding: 2.2% 2.2% 2.2% 4%;
+  border-radius: 10px;
 }
 
 .add-btn-container{
   margin-top:auto;
 }
 
-.add-btn-container > button{
+.add-btn{
   font-size: 25px;
+  padding: 5px;
+}
+
+.add-btn:hover{
+  background-color:#F6BE00;
+  cursor: pointer;
+  font-weight: bolder;
 }
 
 .movie-img{
