@@ -9,7 +9,7 @@ function CartItem(props){
         <img className="cart-img" alt={props.movie["title"]}src={props.movie["image"]}></img>
         <h2 className="cart-title">{props.movie["title"]}</h2>
         <h2>{props.movie["price"]}</h2>
-        <button onClick={removeFromCart}>Remove</button>
+        <button className="remove-btn" onClick={removeFromCart}>&times;</button>
     </div>
     )
 }
