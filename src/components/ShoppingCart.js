@@ -14,11 +14,13 @@ function ShoppingCart(props){
                     removeItemFromCart={props.removeItemFromCart} key={movie["title"]} movie={movie}/>)
                 })}
             </div>
-            <div className="total-price">
-                <h2>{"Total: $".concat(Math.round(totalPrice * 100)/ 100)}</h2>
+            <div className="shopping-cart-bottom">
+                <div className="total-price">
+                    <h2>{"Total: $".concat(Math.round(totalPrice * 100)/ 100)}</h2>
+                </div>
+                <button className="shopping-cart-btn" onClick={()=>{alert("Thanks for visiting! :)")}}><h2>Checkout</h2></button>
+                <button className="shopping-cart-btn" onClick={props.toggleShoppingCart}><h2>Close</h2></button> 
             </div>
-            <button className="shopping-cart-btn" onClick={()=>{alert("Thanks for visiting! :)")}}><h2>Checkout</h2></button>
-            <button className="shopping-cart-btn" onClick={props.toggleShoppingCart}><h2>Close</h2></button>
         </div>
     </div>)
 }
