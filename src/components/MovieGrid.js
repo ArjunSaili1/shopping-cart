@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import MovieCard from "./MovieCard";
+import '../styles/MovieGrid.css'
 import {notFound} from "../assets";
 
 function MovieGrid(props){

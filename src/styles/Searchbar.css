@@ -1,0 +1,44 @@
+.search-container{
+    margin-top: 15vmin;
+    text-align: center;
+    padding: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap: 20px;
+    font-size: 1.3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-container > h6{
+    font-size: 1rem;
+}
+  
+.search-container > * > a{
+    color: #F6BE00;
+    text-decoration: underline;
+}
+
+.search-form{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-submit{
+    font-size: 22px;
+    padding: 2.5%;
+    background-color: #F6BE00;
+    font-weight: bold;
+    border: black;
+    cursor: pointer;
+}
+  
+.search-bar{
+    font-size: 1.5rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 2.2% 2.2% 2.2% 4%;
+    border-radius: 10px;
+}
+  

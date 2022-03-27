@@ -1,4 +1,5 @@
-import {frontPage, frontpage} from '../assets'
+import {frontPage } from '../assets'
+import '../styles/Homepage.css'
 
 function Homepage(){
     return(

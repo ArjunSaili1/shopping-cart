@@ -1,4 +1,5 @@
 import CartItem from "./CartItem"
+import '../styles/ShoppingCart.css'
 
 function ShoppingCart(props){
 

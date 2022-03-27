@@ -1,5 +1,6 @@
 import CartSVG from "./svg/Cart"
 import LogoSVG from "./svg/Logo"
+import '../styles/Header.css'
 
 function Header(props){
 
@@ -15,7 +16,7 @@ function Header(props){
                 <a href="/shop" onClick={props.toggleShoppingCart}className="cart-container">
                     <CartSVG className="cart-icon"/>
                     <span className="cart-count-container">
-                        <span className="cart-count">{props.cart.length}</span>
+                        <span>{props.cart.length}</span>
                     </span>
                 </a>
             </nav>
