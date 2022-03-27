@@ -17,7 +17,9 @@ function MoviesPage(props){
     return(
         <div className="movies-page">
             <div className="search-container">
-                <Searchbar search={search}/>    
+                <h2>Search for any of your favourite movies!</h2>
+                <h6>Powered by the <a href="https://developers.themoviedb.org/">The Movie Database API</a></h6>
+                <Searchbar search={search}/>
             </div>
             {movieGridComp}
         </div>

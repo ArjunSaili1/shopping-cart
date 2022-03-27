@@ -49,8 +49,16 @@ button{
   margin-top: 15vh;
   padding: 2%;
   display: flex;
+  flex-direction: column;
+  color: white;
+  gap: 20px;
+  font-size: 22px;
   justify-content: center;
+  align-items: center;
 }
+.search-container > * > a{
+  color: #F6BE00;
+ }
 
 .search-bar{
   font-size: 30px;
@@ -81,6 +89,7 @@ button{
 }
 
 .header{
+  border-bottom: 1px solid black;
   position: fixed;
   z-index: 99;
   top: 0;
@@ -177,7 +186,7 @@ button{
 .product-view{
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
 
 .cart-title{
