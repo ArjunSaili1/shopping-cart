@@ -8,7 +8,7 @@ function Header(props){
         <header className="header">
             <nav className="header-nav">
                 <span className="logo-container">
-                    <LogoSVG className="logo"/>
+                    <a href="/"><LogoSVG className="logo"/></a>
                     <a href="/"className="title">Reel'd</a>
                 </span>
                 <a href="/"className="nav-links">Home</a>
