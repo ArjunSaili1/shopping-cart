@@ -23,6 +23,7 @@ button{
   padding: 5px;
   font-family: 'Roboto Condensed', sans-serif;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .movies-page{
