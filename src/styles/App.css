@@ -82,6 +82,7 @@ button{
 
 .header{
   position: fixed;
+  z-index: 99;
   top: 0;
   height: 15vh;
   width: 100%;
@@ -141,6 +142,7 @@ button{
 
 .shopping-cart-sidebar{
   display: flex;
+  z-index: 2;
   position: fixed;
   background-color: rgba(57,62,70,0.4);
   height: 100%;
@@ -219,8 +221,9 @@ button{
 }
 
 .homepage{
-  padding-top: 15vh;
-  height: 100vh;
+  z-index: 3;
+  margin-top: 15vh;
+  height: 85vh;
 }
 
 
