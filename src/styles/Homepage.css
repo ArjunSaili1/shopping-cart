@@ -1,7 +1,8 @@
 .homepage{
     z-index: 3;
     height: 85vmin;
-    background-image: url();
+    margin-top: 15vh;
+    overflow: hidden;
 }
 
 .front-text-ctn{
