@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import ShoppingCart from "./components/ShoppingCart";
 import "./styles/App.css"
 import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 function App() {
   const [showCart, setShowCart] = useState(false);
@@ -19,9 +20,19 @@ function App() {
     <CartProvider>
       <Router>
         <Header toggleShoppingCart={toggleShoppingCart}/>
-        {showCart ? 
-        <ShoppingCart toggleShoppingCart={toggleShoppingCart}/> 
-        : null}
+        <AnimatePresence>
+          {showCart ? 
+          <motion.div 
+          key="shoppingCart"
+          initial={{x: "100vw", opacity: 0}}
+          animate={{x: 0, opacity: 1}}
+          exit={{x: "100vw", opacity: 0}} 
+          transition={{duration: 0.4}}
+          className="shopping-cart-sidebar"> 
+            <ShoppingCart toggleShoppingCart={toggleShoppingCart}/> 
+          </motion.div>
+          : null}
+        </AnimatePresence>
         <div className="App">
             <Routes>
               <Route path="/" element={<Homepage/>}/>
