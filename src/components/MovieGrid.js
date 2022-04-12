@@ -3,10 +3,9 @@ import MovieCard from "./MovieCard";
 import '../styles/MovieGrid.css'
 import {notFound} from "../assets";
 
-function MovieGrid(props){
+function MovieGrid({searchTerm}){
 
     const api_key = process.env.REACT_APP_API_KEY;
-
     const [movieCards, setMovieCards] = useState([])
 
     async function getConfig(){
@@ -46,7 +45,7 @@ function MovieGrid(props){
           }
           const releaseDate = movie["release_date"]
           const rating = movie["vote_average"]
-          movieCardArr.push(<MovieCard addItem={props.addItem} key={movie.id} title={movie.title} 
+          movieCardArr.push(<MovieCard key={movie.id} title={movie.title} 
             image={image} releaseDate={releaseDate} rating={rating}/> )
         })
       }
@@ -57,7 +56,7 @@ function MovieGrid(props){
     }
   
     useEffect(()=>{
-      searchMovie(props.searchTerm).then((data)=>{
+      searchMovie(searchTerm).then((data)=>{
           setMovieCards(data)
       })
     })

@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
 function MovieCard(props){
 
     const[showAdd, setShowAdd] = useState(true);
+    const {addItemToCart} = useContext(CartContext);
 
     const giveCartMovieDetails = (e) =>{
         setShowAdd(false)
@@ -12,7 +14,7 @@ function MovieCard(props){
             price: price,
             showAdd: ()=>{setShowAdd(true)},
         }
-        props.addItem(movieDetails)
+        addItemToCart(movieDetails)
     }
 
     const price = props.releaseDate? "$".concat(props.releaseDate.substring(0,2)-0.01) : "Unavailable"

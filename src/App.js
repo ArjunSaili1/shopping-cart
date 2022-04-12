@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import MoviesPage from "./pages/MoviesPage";
+import { CartContext } from "./context/CartContext";
 import Header from "./components/Header";
 import ShoppingCart from "./components/ShoppingCart";
 import "./styles/App.css"
@@ -29,12 +30,16 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Header toggleShoppingCart={toggleShoppingCart} cart={cart}/>
-        {showCart ? <ShoppingCart removeItemFromCart={removeItemFromCart} toggleShoppingCart={toggleShoppingCart} cart={cart}/> : null}
-        <Routes>
-          <Route path="/" element={<Homepage/>}/>
-          <Route path="/shop" element={<MoviesPage addItem={addItemToCart}/>}/>
-        </Routes>
+        <CartContext.Provider value={{cart, removeItemFromCart, addItemToCart}}>
+          <Header toggleShoppingCart={toggleShoppingCart}/>
+          {showCart ? 
+          <ShoppingCart toggleShoppingCart={toggleShoppingCart}/> 
+          : null}
+          <Routes>
+            <Route path="/" element={<Homepage/>}/>
+            <Route path="/shop" element={<MoviesPage/>}/>
+          </Routes>
+        </CartContext.Provider>
       </div>
     </Router>
   );

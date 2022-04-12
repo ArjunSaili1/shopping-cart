@@ -1,9 +1,11 @@
 import CartSVG from "./svg/Cart"
 import LogoSVG from "./svg/Logo"
+import { CartContext } from "../context/CartContext"
+import { useContext } from "react"
 import '../styles/Header.css'
 
-function Header(props){
-
+function Header({toggleShoppingCart}){
+    const {cart} = useContext(CartContext);
     return(
         <header className="header">
             <nav className="header-nav">
@@ -13,10 +15,10 @@ function Header(props){
                 </span>
                 <a href="/"className="nav-links">Home</a>
                 <a href="/shop" className="nav-links">Shop</a>
-                <a href="/shop" onClick={props.toggleShoppingCart}className="cart-container">
+                <a href="/shop" onClick={toggleShoppingCart}className="cart-container">
                     <CartSVG className="cart-icon"/>
                     <span className="cart-count-container">
-                        <span>{props.cart.length}</span>
+                        <span>{cart.length}</span>
                     </span>
                 </a>
             </nav>

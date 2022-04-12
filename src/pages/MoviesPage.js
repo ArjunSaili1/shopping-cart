@@ -1,17 +1,17 @@
 import MovieGrid from "../components/MovieGrid"
 import Searchbar from "../components/Searchbar"
 import { useEffect, useState } from "react"
-function MoviesPage(props){
+function MoviesPage(){
     
     const [movieGridComp, setMovieGridComp] = useState([])
 
     function search(e){
         e.preventDefault()
-        setMovieGridComp(<MovieGrid addItem={props.addItem} searchTerm={e.target.children[0].value}/>)
+        setMovieGridComp(<MovieGrid searchTerm={e.target[0].value}/>)
     }
 
     useEffect(()=>{
-        setMovieGridComp(<MovieGrid addItem={props.addItem} searchTerm="Batman"/>)
+        setMovieGridComp(<MovieGrid searchTerm="Batman"/>)
     }, [])
 
     return(
