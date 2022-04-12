@@ -1,6 +1,7 @@
 import CartSVG from "./svg/Cart"
 import LogoSVG from "./svg/Logo"
-import { CartContext } from "../context/CartContext"
+import CartContext from "../context/CartContext"
+import { Link } from "react-router-dom"
 import { useContext } from "react"
 import '../styles/Header.css'
 
@@ -10,17 +11,17 @@ function Header({toggleShoppingCart}){
         <header className="header">
             <nav className="header-nav">
                 <span className="logo-container">
-                    <a href="/"><LogoSVG className="logo"/></a>
-                    <a href="/"className="title">Reel'd</a>
+                    <Link to="/"><LogoSVG className="logo"/></Link>
+                    <Link to="/"className="title">Reel'd</Link>
                 </span>
-                <a href="/"className="nav-links">Home</a>
-                <a href="/shop" className="nav-links">Shop</a>
-                <a href="/shop" onClick={toggleShoppingCart}className="cart-container">
+                <Link to="/"className="nav-links">Home</Link>
+                <Link to="/shop" className="nav-links">Shop</Link>
+                <Link to="/shop" onClick={toggleShoppingCart}className="cart-container">
                     <CartSVG className="cart-icon"/>
                     <span className="cart-count-container">
                         <span>{cart.length}</span>
                     </span>
-                </a>
+                </Link>
             </nav>
         </header>
     )
