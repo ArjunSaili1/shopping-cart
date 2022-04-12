@@ -1,8 +1,8 @@
-import { useState, useContext, useEffect } from "react";
+import { useState, useContext } from "react";
 import CartContext from "../context/CartContext";
 import { AnimatePresence, motion } from "framer-motion";
 
-function MovieCard({title, image, releaseDate, rating, inCart}){
+function MovieCard({title, image, releaseDate, rating}){
 
     const[showAdd, setShowAdd] = useState(true);
     const {addItemToCart} = useContext(CartContext);
@@ -17,13 +17,6 @@ function MovieCard({title, image, releaseDate, rating, inCart}){
         }
         addItemToCart(movieDetails)
     }
-
-    useEffect(()=>{
-        if(inCart){
-            setShowAdd(false)
-        }
-        return(()=>{setShowAdd(true)})
-    }, [inCart])
 
     const price = releaseDate? "$".concat(releaseDate.substring(0,2)-0.01) : "Unavailable"
 
