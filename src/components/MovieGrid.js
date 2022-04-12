@@ -1,12 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import MovieCard from "./MovieCard";
 import '../styles/MovieGrid.css'
+import CartContext from "../context/CartContext";
 import {notFound} from "../assets";
+import { motion } from "framer-motion";
 
 function MovieGrid({searchTerm}){
 
     const api_key = process.env.REACT_APP_API_KEY;
     const [movieCards, setMovieCards] = useState([])
+    const {cart} = useContext(CartContext);
 
     async function getConfig(){
       try{
@@ -43,9 +46,13 @@ function MovieGrid({searchTerm}){
           if(!movie["poster_path"]){
             image = notFound;
           }
+          let inCart;
+          cart.forEach((cartMovie)=>{
+            cartMovie["title"] === movie["title"] ? inCart = true : inCart = false;
+          })
           const releaseDate = movie["release_date"]
           const rating = movie["vote_average"]
-          movieCardArr.push(<MovieCard key={movie.id} title={movie.title} 
+          movieCardArr.push(<MovieCard key={movie.id} inCart={inCart} title={movie.title} 
             image={image} releaseDate={releaseDate} rating={rating}/> )
         })
       }
@@ -56,15 +63,17 @@ function MovieGrid({searchTerm}){
     }
   
     useEffect(()=>{
+      let isMounted = true;
       searchMovie(searchTerm).then((data)=>{
-          setMovieCards(data)
+          if(isMounted){setMovieCards(data)}
       })
+      return () => {isMounted = false}
     })
 
     return(
-        <div className="movie-grid">
-            {movieCards.map(movie => movie)}
-        </div>
+      <div className="movie-grid">
+          {movieCards.map(movie => movie)}
+      </div>
     )
 }
 
