@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+<div id="top"></div>
+<h1 align="center">Reel'd</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <p align="center">
+    Search for & "Buy" any of your favourite movies!
+  <br/>
+    <br />
+    <a href="https://reeld.vercel.app/">Play</a>
+    ·
+    <a href="https://github.com/ArjunSaili1/shopping-cart/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/ArjunSaili1/shopping-cart">Request Feature</a>
+  </p>
+</div>
 
-## Available Scripts
+## About The Project
 
-In the project directory, you can run:
+<img width="1512" alt="Screen Shot 2022-04-13 at 10 51 23 PM" src="https://user-images.githubusercontent.com/66842156/163304210-c751fa88-cee6-4ac1-8db1-e3c128465336.png">
 
-### `npm start`
+<a href="#preview">More screenshots</a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Reel'd is a front-end mock up of a movie selling site. It uses an API to search for movies. Users can add any movie they would like to their cart and see their final total. 
+<i>Reel'd does not actually process purchases!</i>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting started
 
-### `npm test`
+```
+git clone https://github.com/ArjunSaili1/shopping-cart
+cd shopping-cart
+npm install
+npm start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Built With
 
-### `npm run build`
+- [React](https://reactjs.org/)
+- [React Hooks](https://reactjs.org/docs/hooks-intro.html)
+- [React Context API](https://reactjs.org/docs/context.html)
+- [The Movie Database API](https://developers.themoviedb.org/3)
+- [Framer Motion](https://www.framer.com/docs/)
+- Vanilla CSS
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Preview
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Desktop
+<div align="center">
+    <img width="1512" alt="Screen Shot 2022-04-13 at 10 50 41 PM" src="https://user-images.githubusercontent.com/66842156/163304131-9b08ea10-d2d4-4a87-a793-3cdfcab213e5.png">
+    <img width="1512" alt="Screen Shot 2022-04-13 at 10 53 04 PM" src="https://user-images.githubusercontent.com/66842156/163304352-a2f53f39-af56-404c-a130-2c2fd5bcd01a.png">
+</div>
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Mobile 
+<div align="center">
+  <img width="325" alt="Screen Shot 2022-04-13 at 10 55 21 PM" src="https://user-images.githubusercontent.com/66842156/163304595-19c6b114-7a29-49f7-ad84-b6605fcf90d9.png">
+  <img width="321" alt="Screen Shot 2022-04-13 at 10 55 56 PM" src="https://user-images.githubusercontent.com/66842156/163304642-0373ccfd-062c-4958-a5b5-216404cdbbc5.png">
+ </div>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contact
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Arjun Saili - [LinkedIn](https://www.linkedin.com/in/arjunsaili/) - arjun7.saili@gmail.com
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="right">(<a href="#top">back to top</a>)</p>
